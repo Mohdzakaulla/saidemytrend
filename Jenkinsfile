@@ -43,4 +43,6 @@ pipeline {                                    // 1  // Defines the start of the 
                                               // Runs the SonarQube scanner tool
                 }                             // Ends the withSonarQubeEnv block
             }                                 // 10  // Ends the steps block for 'SonarQube analysis' stage
-        }                                     // 8  // Ends the 'SonarQube analysis' stage
+                                             // 8  // Ends the 'SonarQube analysis' stage
+        }
+   }
