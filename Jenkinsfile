@@ -32,6 +32,14 @@ pipeline {
                 }
             }
         }
+
+        stage("Quality Gate") {
+            steps {
+                timeout(time: 1, unit: 'MINUTES') {
+                    waitForQualityGate abortPipeline: true
+                }
+            }
+        }
     }
 
     post {
@@ -45,5 +53,5 @@ pipeline {
             echo "Pipeline succeeded"
         }
     }
-} // Ensure this closing brace ends the `pipeline` block
+}
 
